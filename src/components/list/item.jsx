@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Item = (todo, deleteTodo, id) => {
+const Item = ({todo, deleteTodo, id}) => {
   return (
     <li className="completed">
         <div className="view">
