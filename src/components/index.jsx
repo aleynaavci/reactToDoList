@@ -5,7 +5,7 @@ import List from './list/list.jsx'
 import Footer from './footer/footer.jsx'
 
 function App() {
-  const [todos, setTodos] = useState(['a', 'b', 'c']);
+  const [todos, setTodos] = useState(['Learn JavaScript', 'Learn React', 'Have a life!']);
   /*const [todos, setTodos] = useState([
     { id: "todo-0", name: "Learn JavaScript", completed: true },
     { id: "todo-1", name: "Learn React", completed: false },

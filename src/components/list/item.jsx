@@ -1,6 +1,6 @@
 import React from 'react'
 
-const item = (todo, deleteTodo, id, index) => {
+const Item = (todo, deleteTodo, id) => {
   return (
     <li className="completed">
         <div className="view">
@@ -19,4 +19,4 @@ const item = (todo, deleteTodo, id, index) => {
   )
 }
 
-export default item
+export default Item
