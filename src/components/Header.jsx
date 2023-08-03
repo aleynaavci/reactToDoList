@@ -1,11 +1,11 @@
 import React from 'react'
-import Form from './Form'
+import TodoForm from './TodoForm'
 
 function Header() {
   return (
 	<header className="header">
     <h1>todos</h1>
-    <Form/>
+    <TodoForm/>
     </header>
   )
 }
