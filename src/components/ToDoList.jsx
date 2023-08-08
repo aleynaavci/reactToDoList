@@ -1,29 +1,23 @@
 import React from 'react'
+import { useTodo } from '../contexts/TodoContext'
+import Item from './Item'
 
+let filtered =null
 function ToDoList() {
+    const {todos,filter} = useTodo()
+
+    filtered=todos;
+    
+    if(filter !== 'all'){
+        filtered=todos.filter ((todo)=> filter==='active'? todo.completed===false : todo.completed ===true)
+    }
   return (
     <ul className="todo-list">
-        <li className="completed">
-            <div className="view">
-                <input className="toggle" type="checkbox" />
-                <label>Learn JavaScript</label>
-                <button className="destroy"></button>
-            </div>
-        </li>
-        <li>
-            <div className="view">
-                <input className="toggle" type="checkbox" />
-                <label>Learn React</label>
-                <button className="destroy"></button>
-            </div>
-        </li>
-        <li>
-            <div className="view">
-                <input className="toggle" type="checkbox" />
-                <label>Have a life!</label>
-                <button className="destroy"></button>
-            </div>
-        </li>
+        {
+        filtered.map((todo)=>(
+            <Item key={todo.id} todo={todo}/>
+        ))
+        }
     </ul>
   )
 }
